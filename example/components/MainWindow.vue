@@ -20,6 +20,7 @@
       </Box>
       <TextArea stretchy v-model="multilineText"/>
       <Text>Number of lines: {{ numberOfLines }}</Text>
+      <CheckBox v-bind:enabled="enabled" v-model="checked">{{checked ? 'Happy' : 'Not Happy'}}</CheckBox>
     </Box>
   </Window>
 </template>
@@ -35,7 +36,8 @@ export default {
       counter: 0,
       random: 0,
       text: 'Edit me',
-      multilineText: 'Edit me too'
+      multilineText: 'Edit me too',
+      checked: false
     };
   },
   computed: {
